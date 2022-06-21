@@ -8,10 +8,8 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@chakra-ui/react": "^2.2.1",
-		"@emotion/react": "^11",
-		"@emotion/styled": "^11",
-		"framer-motion": "^6",
+		"@mantine/core": "^4.2.10",
+		"@mantine/hooks": "^4.2.10",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
 		"wouter": "2.8.0-alpha.2",
