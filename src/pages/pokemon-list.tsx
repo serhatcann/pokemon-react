@@ -1,4 +1,4 @@
-import { Loader } from '@mantine/core';
+import { Group, Loader } from '@mantine/core';
 import { useState, useEffect } from 'react';
 import PokemonCard from '../components/PokemonCard';
 import useStore from '../store/pokemonStore';
@@ -13,11 +13,11 @@ const PokemonList = () => {
 	if (status === 'Pending') return <Loader color='dark' />;
 	if (status === 'Success')
 		return (
-			<ul>
+			<Group position='center'>
 				{pokemons?.map((p) => (
-					<PokemonCard key={p.url} name={p.name} url={p.url}></PokemonCard>
+					<PokemonCard key={p.id} name={p.name} id={p.id}></PokemonCard>
 				))}
-			</ul>
+			</Group>
 		);
 	return <div>Something went wrong while fetching pokemons!</div>;
 };
