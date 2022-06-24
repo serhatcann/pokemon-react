@@ -7,6 +7,7 @@ const PokemonList = () => {
 	const { pokemons, status, getPokemons } = useStore((state) => state);
 
 	useEffect(() => {
+		window.document.title = 'Pokemon Home';
 		getPokemons({});
 	}, []);
 

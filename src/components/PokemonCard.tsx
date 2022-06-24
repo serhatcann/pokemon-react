@@ -1,5 +1,6 @@
 import { Card, Text, Image, Button, Stack } from '@mantine/core';
 import { useRef } from 'react';
+import { useLocation } from 'wouter';
 
 const PokemonCard = ({ name, id }: { name: string; id: string }) => {
 	const buttonRef = useRef<any>();
@@ -11,6 +12,7 @@ const PokemonCard = ({ name, id }: { name: string; id: string }) => {
 		}
 	};
 
+	const [, setLocation] = useLocation();
 	return (
 		<Card
 			onMouseEnter={toggleButton}
@@ -38,6 +40,7 @@ const PokemonCard = ({ name, id }: { name: string; id: string }) => {
 					{name}
 				</Text>
 				<Button
+					onClick={() => setLocation(`/details/${id}`)}
 					ref={buttonRef}
 					color='dark'
 					style={{ visibility: 'hidden' }}

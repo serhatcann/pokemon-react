@@ -16,3 +16,12 @@ export const fetchPokemons = async ({ limit = 30, offset = 0 }: Query) => {
 
 	return result;
 };
+
+export const getPokemonDetailsById = async (id: string) => {
+	const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+	if (!response.ok) {
+		return;
+	}
+	const result = await response.json();
+	return result;
+};

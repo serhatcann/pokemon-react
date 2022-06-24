@@ -1,5 +1,7 @@
 import { Container, Stack } from '@mantine/core';
+import PokemonDetails from './pages/pokemon-details';
 import PokemonList from './pages/pokemon-list';
+import { Route, Switch } from 'wouter';
 
 function App() {
 	return (
@@ -8,7 +10,12 @@ function App() {
 				TEST
 			</header>
 			<Container size='xl'>
-				<PokemonList />
+				<Switch>
+					<Route path='/home' component={PokemonList} />
+					<Route path='/details/:id'>
+						{(params) => <PokemonDetails id={params.id} />}
+					</Route>
+				</Switch>
 			</Container>
 		</Stack>
 	);
