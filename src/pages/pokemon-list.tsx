@@ -1,5 +1,5 @@
 import { Group, Loader } from '@mantine/core';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import PokemonCard from '../components/PokemonCard';
 import useStore from '../store/pokemonStore';
 
@@ -7,7 +7,7 @@ const PokemonList = () => {
 	const { pokemons, status, getPokemons } = useStore((state) => state);
 
 	useEffect(() => {
-		getPokemons();
+		getPokemons({});
 	}, []);
 
 	if (status === 'Pending') return <Loader color='dark' />;

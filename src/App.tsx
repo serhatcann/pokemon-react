@@ -4,7 +4,9 @@ import PokemonList from './pages/pokemon-list';
 function App() {
 	return (
 		<Stack>
-			<header className='App-header'>TEST</header>
+			<header className='App-header' style={{ height: '40px' }}>
+				TEST
+			</header>
 			<Container size='xl'>
 				<PokemonList />
 			</Container>

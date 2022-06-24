@@ -1,4 +1,4 @@
-import { Query, Pokemon } from '../pokemon';
+import { Query } from '../pokemon';
 import { buildPokemonArray } from '../utils/pokemon';
 
 export const fetchPokemons = async ({ limit = 30, offset = 0 }: Query) => {
