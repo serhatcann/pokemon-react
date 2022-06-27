@@ -5,8 +5,8 @@ export type Pokemon = {
 };
 
 export type Query = {
-	limit?: number;
-	offset?: number;
+	limit: number;
+	offset: number;
 };
 
 export type Status = 'Pending' | 'Success' | 'Error';

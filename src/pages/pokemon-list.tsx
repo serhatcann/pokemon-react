@@ -8,7 +8,7 @@ const PokemonList = () => {
 
 	useEffect(() => {
 		window.document.title = 'Pokemon Home';
-		getPokemons({});
+		getPokemons({ limit: 30, offset: 0 });
 	}, []);
 
 	if (status === 'Pending') return <Loader color='dark' />;

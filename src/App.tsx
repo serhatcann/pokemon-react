@@ -2,13 +2,12 @@ import { Container, Stack } from '@mantine/core';
 import PokemonDetails from './pages/pokemon-details';
 import PokemonList from './pages/pokemon-list';
 import { Route, Switch } from 'wouter';
+import Header from './components/Header';
 
 function App() {
 	return (
 		<Stack>
-			<header className='App-header' style={{ height: '40px' }}>
-				TEST
-			</header>
+			<Header />
 			<Container size='xl'>
 				<Switch>
 					<Route path='/home' component={PokemonList} />
